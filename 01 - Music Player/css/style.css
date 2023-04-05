@@ -66,6 +66,10 @@ body {
     gap: 50px;
 }
 
+.buttons img {
+    cursor: pointer;
+}
+
 .progress {
     width: 100%;
 }
