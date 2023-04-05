@@ -1,0 +1,9 @@
+@media (max-width: 426px) {
+    .music-player .row:first-child {
+        flex-direction: column;
+    }
+
+    .album-cover {
+        width: 11.8rem;
+    }
+}
