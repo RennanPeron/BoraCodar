@@ -14,30 +14,30 @@
             <div class="flex row">
                 <img class="album-cover" src="img/album-cover.png" alt="Album">
                 <div class="info">
-                    <p class="name">Acorda Devinho</p>
-                    <p class="artist">Banda Rocketseat</p>
+                    <p class="name">{{music.name}}</p>
+                    <p class="artist">{{music.artist}}</p>
                 </div>
             </div>
             <div class="flex row buttons">
                 <img src="img/play-back.svg" alt="Voltar">
-                <img id="play" src="img/play.svg" alt="Tocar">
+                <img id="play" 
+                :src="isTimerOn == false ? 'img/play.svg' : 'img/pause-solid.svg'" alt="Tocar" 
+                @click="isTimerOn == false ? TimerOn() : TimerOff()">
                 <img src="img/play-forward.svg" alt="Seguinte">
             </div>
             <div class="progress">
-                <div class="bar">
-                    
-                </div>
                 <div class="progress-bar">
-                    <div class="progress-bar-fill"></div>
+                    <div class="progress-bar-fill" :style="BarWidth"></div>
                 </div>
                 <div class="timer flex row">
                     <div class="total-time">3:20</div>
-                    <div class="remaining-time">3:20</div>
+                    <div class="remaining-time">{{TimeLeft}}</div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="./scripts/music-data.js"></script>
+    
+    <script type="text/javascript" src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript" src="./scripts/music-data.js"></script>
 </body>
 </html>
