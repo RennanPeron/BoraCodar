@@ -9,7 +9,7 @@
     <title>Music Player</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" v-cloak>
         <div class="flex music-player">
             <div class="flex row">
                 <img class="album-cover" src="img/album-cover.png" alt="Album">
@@ -19,18 +19,20 @@
                 </div>
             </div>
             <div class="flex row buttons">
-                <img src="img/play-back.svg" alt="Voltar">
+                <img src="img/play-back.svg" alt="Voltar"
+                @click="isTimerOn == true ? StopTimer() : Rewind()">
                 <img id="play" 
                 :src="isTimerOn == false ? 'img/play.svg' : 'img/pause-solid.svg'" alt="Tocar" 
                 @click="isTimerOn == false ? TimerOn() : TimerOff()">
-                <img src="img/play-forward.svg" alt="Seguinte">
+                <img src="img/play-forward.svg" alt="Seguinte"
+                @click="Forward()">
             </div>
             <div class="progress">
                 <div class="progress-bar">
                     <div class="progress-bar-fill" :style="BarWidth"></div>
                 </div>
                 <div class="timer flex row">
-                    <div class="total-time">3:20</div>
+                    <div class="total-time">{{MusicLenght}}</div>
                     <div class="remaining-time">{{TimeLeft}}</div>
                 </div>
             </div>
