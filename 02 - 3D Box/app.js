@@ -25,7 +25,10 @@ Vue.createApp({
             this.rotateX = this.rotateY = this.rotateZ = 0
         },
         Copy: function() {
-            console.log(`transform: ${this.BoxStyle.transform}`)
+            let text = `transform: ${this.BoxStyle.transform}`
+
+            navigator.clipboard.writeText(text)
+            // .then(() => {alert('CSS copied to Clipboard!')})
         }
     },
     computed: {
