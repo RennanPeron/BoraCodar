@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+
     <title>eShop - Product Page</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+
+        <div class="product-image">
+            <button><img :src="click3D == false ? 'assets/360.svg' : 'assets/close.svg'" @click="click3D = !click3D"></button>
+            <img :src="click3D == false ?  'assets/couch.png' : 'assets/couch-gif.gif'" alt="Couch Image">
+        </div>
+
+        <div class="product-info">
+            <p class="product-code">CODE: {{product.code}}</p>
+            <h2 class="product-name">{{product.name}}</h2>
+            <p class="product-price">R$ {{product.price.toLocaleString('pt-br')}}</p>
+            <button>Add to cart</button>
+        </div>
+
+    </div>
 
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>
