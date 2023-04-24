@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+
+    <title>Buttons Style</title>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="buttons-style">
+                <h2>Tipos de botão</h2>
+            </div>
+            <div class="buttons">
+                <h2>Teste os botões</h2>
+                <button @click.prevent="ButtonClick" id="primary">Click!</button>
+                <button @click.prevent="ButtonClick" id="secondary">Click!</button>
+                <button @click.prevent="ButtonClick" id="tertiary">Click!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
