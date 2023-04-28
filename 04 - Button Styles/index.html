@@ -6,21 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
 
     <title>Buttons Style</title>
 </head>
 <body>
     <div id="app">
         <div class="container">
-            <div class="buttons-style">
-                <h2>Tipos de botão</h2>
-            </div>
             <div class="buttons">
                 <h2>Teste os botões</h2>
-                <button @click.prevent="ButtonClick" id="primary">Click!</button>
-                <button @click.prevent="ButtonClick" id="secondary">Click!</button>
-                <button @click.prevent="ButtonClick" id="tertiary">Click!</button>
+                <p>Interaja com os botões e observe a mudança de aparência e de cursores</p>
+                <div class="buttons-container">
+                    <button @click.prevent="ButtonClick" id="primary">Click!</button>
+                    <button @click.prevent="ButtonClick" id="secondary">Click!</button>
+                    <button @click.prevent="ButtonClick" id="tertiary">Click!</button>
+                </div>
             </div>
+            <!-- <div class="buttons-style">
+                <h2>Tipos de botão</h2>
+            </div> -->
         </div>
     </div>
 

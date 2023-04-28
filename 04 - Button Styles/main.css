@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Typography */
+h1, h2, h3, button {
+    font-family: 'Inter', sans-serif;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 100%;
+    margin-bottom: 0.5rem;
+}
+
+button {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    width: 100%;
+    height: 3rem;
+    border-radius: 1.5rem;
+    border: none;
+    margin: 2rem auto;
+}
+
+p {
+    line-height: 1.4rem;
+    color: rgba(255, 255, 255, .6);
+}
+
+body {
+    background-color: #130F1E;
+}
+
+/* Layout */
+.container {
+    margin: 6.7rem 2.75rem;
+}
+
+.buttons-container {
+    margin-top: 4.25rem;
+}
+
+#primary {
+    background-color: #8257E5;
+}
+
+#secondary {
+    background-color: #3C3748;
+}
+
+#tertiary {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* Buttons Styles */
+button:focus {
+    border: 2px solid #D9CDF7;
+}
+
+#primary:hover {
+    background-color: #9674E6;    
+}
+
+#secondary:hover {
+    background-color: #6A617F;
+}
